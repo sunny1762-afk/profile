@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./css/font.css">
     <link rel="stylesheet" href="./css/system.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animation.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
@@ -36,7 +37,6 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 
     <script src="./js/index.js"></script>
-    <link rel="stylesheet" href="./css/animation.css">
     <script src="./js/observer.js"></script>
 </head>
 <body>
@@ -385,7 +385,249 @@
                     </div>
                 </div>
             </div>
+
+        <!-- 포스터 -->
+         <div class="poster" id="sec4">
+            <div class="common-frame">
+                <ul class="poster-list">
+                    <li>
+                        <figure>
+                            <img src="./img/poster1.jpg" alt="Pistachio Chocolate Latte">
+                        </figure>
+                        <div class="poster-txt">
+                            <h3>Pistachio Chocolate Latte</h3>
+                            <p>딥한 네이비 배경과 강한 대비의 타이포그래피로 신제품의 주목도를 높이고, 한눈에 메시지가 전달되도록 구성했습니다.</p>
+                            <p>제품 이미지와 원물을 함께 배치해 맛과 재료의 특징을 직관적으로 표현했습니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="./img/poster2.jpg" alt="LUMIERE Lip Tint">
+                        </figure>
+                        <div class="poster-txt">
+                            <h3>LUMIERE Lip Tint</h3>
+                            <p>핑크 톤의 컬러와 광택감 있는 텍스처를 중심으로 제품의 매력을 감각적으로 표현한 립 제품 포스터입니다.</p>
+                            <p>유리잔과 진주, 하트 오브제를 활용해 로맨틱하고 글로시한 무드를 강조하며 시선을 자연스럽게 제품에 집중시키도록 구성했습니다.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="./img/poster3.jpg" alt="Nature Within">
+                        </figure>
+                        <div class="poster-txt">
+                            <h3>Nature Within</h3>
+                            <p>자연의 색감과 오브제를 활용해 내면의 자연성과 일상의 연결을 시각적으로 표현한 포스터입니다.</p>
+                            <p>인물과 식물 요소를 결합하고 대비되는 컬러를 사용해 감각적이면서도 메시지가 자연스럽게 전달되도록 구성했습니다.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="poster-title">
+                    <h2 class="pt"><span class="pt i">P</span>OSTERS</h2>
+                    <p>시선을 끄는 비주얼과 구조를 통해, 한 눈에 메시지를 인지할 수 있도록 설계한 포스터 디자인입니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 배너 -->
+         <div class="banner" id="sec5">
+            <div class="common-frame">
+                <h2 class="pt"><span class="pt i">B</span>ANNERS</h2>
+                <p>웹사이트의 첫인상을 결정짓는 배너 영역에서, 시선을 끌고 핵심 메시지를 직관적으로 전달하도록 설계했습니다.</p>
+                <div class="swiper banner-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="./img/banner1.jpg" alt="크리스마스 배너">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/banner2.jpg" alt="나이키 세일 배너">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/banner3.jpg" alt="배너">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/banner4.jpg" alt="배너">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/banner5.jpg" alt="배너">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/banner6.jpg" alt="배너">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/banner7.jpg" alt="배너">
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const bannerSlider = new Swiper(".banner-slider",{
+                        autoplay:{
+                            delay:3000
+                        },
+                        speed:1000,
+                        loop:true
+                    })
+                </script>
+            </div>
+        </div>
        </div>
+
+        <!-- 디테일페이지 -->
+         <div class="detail" id="detail">
+            <div class="common-frame">
+                <h2 class="pt"><span class="pt i">D</span>ETAILS</h2>
+                <p>가가상의 상품을 기반으로 AI를 활용해 비주얼 요소를 구성하고 제품의 이해와 설득을 고려한 흐름으로 제작한 상세페이지입니다.</p>
+                <div class="swiper detail-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="./detail-1.html">
+                                <figure>
+                                    <img src="./img/detail-lotion-thumb.jpg" alt="로션 디테일페이지 섬네일">
+                                </figure>
+                                <h4>Clean Beauty Direction</h4>
+                                <h5 class="fwb">클린한 비주얼과 톤으로 신뢰감을 높인 로션 상세페이지</h5>
+                            </a>
+                        </div>
+                        
+                        <div class="swiper-slide">
+                            <a href="./detail-2.html">
+                                <figure>
+                                    <img src="./img/detail-headset-thumb.jpg" alt="헤드셋 디테일페이지 섬네일">
+                                </figure>
+                                <h4>Where Elegance Meets Next-Gen Technology</h4>
+                                <h5 class="fwb">기술과 감각의 공존, 직접 설계한 무선 헤드셋 상세페이지</h5>
+                            </a>
+                        </div>
+    
+                        <div class="swiper-slide">
+                            <a href="./detail-3.html">
+                                <figure>
+                                    <img src="./img/detail-chair-thumb.jpg" alt="의자 디테일페이지 섬네일">
+                                </figure>
+                                <h4>The Art of Ergonomic Seating & Human-Centered Design</h4>
+                                <h5 class="fwb">업무의 질을 바꾸는 설계, 직접 기획한 프리미엄 오피스 체어 상세페이지</h5>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="./detail-3.html">
+                                <figure>
+                                    <img src="./img/detail-chair-thumb.jpg" alt="의자 디테일페이지 섬네일">
+                                </figure>
+                                <h4>The Art of Ergonomic Seating & Human-Centered Design</h4>
+                                <h5 class="fwb">업무의 질을 바꾸는 설계, 직접 기획한 프리미엄 오피스 체어 상세페이지</h5>
+                            </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <a href="./detail-3.html">
+                                <figure>
+                                    <img src="./img/detail-chair-thumb.jpg" alt="의자 디테일페이지 섬네일">
+                                </figure>
+                                <h4>The Art of Ergonomic Seating & Human-Centered Design</h4>
+                                <h5 class="fwb">업무의 질을 바꾸는 설계, 직접 기획한 프리미엄 오피스 체어 상세페이지</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const detailSwiper = new Swiper(".detail-swiper",{
+                        speed:1000,
+                        slidesPerView: 1.2,
+                        spaceBetween: 14,
+                        // Responsive breakpoints
+                        breakpoints: {
+                            // when window width is >= 320px
+                            320: {
+                            slidesPerView: 1.6,
+                            spaceBetween: 14
+                            },
+                            // when window width is >= 480px
+                            480: {
+                            slidesPerView: 1.6,
+                            spaceBetween: 14
+                            },
+                            // when window width is >= 640px
+                            1200: {
+                            slidesPerView: 2.2,
+                            spaceBetween: 20
+                            },
+                            1400: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                            },
+                        }
+                    })
+                </script>
+            </div>
+        </div>
+
+        <!-- .반응형프로젝트 -->
+         <div class="project" id="sec7">
+            <div class="common-frame">
+                <h2 class="pt"><span class="pt i">R</span>span>esponsive Web Works</h2>
+                <p>실제 서비스 환경을 고려하여 제작된 반응형 프로젝트들입니다.<br>그리드 시스템과 상대단위를 활용하여 어떤 브라우저에서도 왜곡 없는 UI를 경험 하실 수 있도록 디자인하였습니다.</p>
+                <h3>Break Point</h3>
+                <ul class="responsive-icon">
+                    <li>
+                        <figure>
+                            <img src="./img/brk1.svg" alt="모바일 768픽셀">
+                        </figure>
+                        <h5>mobile</h5>
+                        <p>768px</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="./img/brk2.svg" alt="탭패드 1024픽셀">
+                        </figure>
+                        <h5>tab - pad</h5>
+                        <p>1024px</p>
+                    </li>
+                    <li>
+                        <figure>
+                            <img src="./img/brk3.svg" alt="데스크탑 1024픽셀 이상">
+                        </figure>
+                        <h5>desktop</h5>
+                        <p>1920px</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 크리니크 -->
+             <div class="project-content">
+                <div class="common-frame">
+                    <h3 class="ani1"><span>1</span>Project</h3>
+                    <h4 class="ani1">MORVA Coffee Responsive WebSite</h4>
+                    <p class="fwb ani1">커피의 화려함보다는 '본질(Flavor)'과 '휴식(Moment)'에 집중했습니다.</p>
+                    <p class="ani1">장식적인 요소를 최소화하고 화이트 스페이스(여백)를 과감하게 활용하여,<br> 사용자가 브랜드의 이미지와 콘텐츠에 온전히 몰입할 수 있는 미니멀리즘 디자인을 채택했습니다.</p>
+                </div>
+                <ul class="project-sticky">
+                    <li><a href="#">Original</a></li>
+                    <li><a href="#">Renewl</a></li>
+                </ul>
+                <figure class="project-detail">
+                    <img src="./img/clinique_pc.jpg" alt="크리니크 상세페이지 pc" class="pc">
+                    <img src="./img/clinique_mo.jpg" alt="크리니크 상세페이지 mobile" class="mo">
+                </figure>
+            </div>
+
+            <!-- 로아모 -->
+             <div class="project-content">
+                <div class="common-frame">
+                    <h3 class="ani1"><span>2</span>Project</h3>
+                    <h4 class="ani1">MORVA Coffee Responsive WebSite</h4>
+                    <p class="fwb ani1">커피의 화려함보다는 '본질(Flavor)'과 '휴식(Moment)'에 집중했습니다.</p>
+                    <p class="ani1">장식적인 요소를 최소화하고 화이트 스페이스(여백)를 과감하게 활용하여,<br> 사용자가 브랜드의 이미지와 콘텐츠에 온전히 몰입할 수 있는 미니멀리즘 디자인을 채택했습니다.</p>
+                </div>
+                <ul class="project-sticky">
+                    <li><a href="#">Website</a></li>
+                    <li><a href="#">Figma</a></li>
+                </ul>
+                <figure class="project-detail">
+                    <img src="./img/loamo_pc.jpg" alt="로아모 상세페이지 pc" class="pc">
+                    <img src="./img/loamo_mo.jpg" alt="로아모 상세페이지 mobile" class="mo">
+                </figure>
+            </div>
+        </div>
     </main>
 </body>
 </html>
