@@ -4,29 +4,347 @@
         margin:0 auto;}
 }
 
-    html{
-        font-family: 'Pretendard',sans-serif;
-        font-size: var(--basic-font-pc);
-        scroll-behavior: smooth;
-    }
-    p{
-        line-height: 140%;
-    }
-    .common-frame{
-        width:auto;
-        margin:0 3rem;
-    }
+html{
+    font-family: 'Pretendard', sans-serif;
+    font-size: var(--basic-font-pc);
+    scroll-behavior: smooth;
+}
+p{
+    line-height: 140%;
+}
+.common-frame{
+    width:auto;
+    margin:0 3rem;
+}
 
-    .hero{
-    height:100vh;
-    min-height: 700px;
-    background: url(../img/banner.png) no-repeat 50% 50% / cover;
-    color:#fff;
+.all-menu{
+    display: none;
+}
+.hero{
+height:100vh;
+min-height: 700px;
+background: url(../img/banner.png) no-repeat 50% 50% / cover;
+color:#fff;
+display: flex;
+gap: 20rem;
+}
+.hero-text{
     display: flex;
-    }
-    .left h1{
-        font-size: var(--space-3x-large);
-    }
-    .right h1{
-        font-size: var(--space-3x-large);
-    }
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+.hero .left h1{
+    font-size: var(--space-3x-large);
+}
+.hero .right{
+    align-items: flex-end;
+}
+.hero .right h1{
+    font-size: var(--space-3x-large);
+}
+
+/* 메뉴바 */
+.menu-sticky{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    position: sticky;
+    left:0;
+    top:-2rem;
+    z-index: 2100;
+}
+.btn-menu{
+    width:4rem;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:1px solid #000; */
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+    cursor: pointer;
+}
+.img-wrap{
+    display: inline-block;
+    transition: transform .6s ease;
+}
+.btn-menu:hover .img-wrap{
+    transform: scale(1.3);
+}
+.btn-menu.open:hover .img-wrap{ transform: none; }
+.btn-menu img {
+    height: 1.2rem;
+    position: sticky;
+    left: 0;
+    top: 0.25rem;
+}
+.btn-menu:hover img{
+    animation: spin 2.5s linear infinite
+}
+.btn-menu.open:hover img{ animation: none; }
+
+
+/* 메뉴바 클릭 */
+.all-menu{
+    position: fixed;
+    width:300px;
+    padding:50px 30px;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%)scale(0.7);
+    opacity: 0;
+    pointer-events: none;
+    transition:all 0.4s ease 0s;
+    background-color: rgba(255, 255, 255, 0.424);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.all-menu.on{
+    transform:translate(-50%,-50%)scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+.all-menu-list{
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    /* padding:20vh 0; */
+}
+
+/* 프로필 */
+.pro-title{
+    margin: 0 auto;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+.pro-title .content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top:12rem;
+}
+.content h3{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.pro-title h1{
+    font-size: 3rem;
+}
+.pro-title h1 span{
+    font-size: 5rem;
+}
+.bold{
+    color: var(--point-color);
+}
+
+/* 이미지들어간프로필 */
+.tap{
+    display: inline-block;
+    padding: .2rem 1rem;
+    background-color: #a1cbdf;
+    color: white;
+    border-radius: 1rem;
+}
+.tap.on{
+    animation: shake 0.6s ease
+}
+.profile1{
+    margin-top: 7rem;
+    display: flex;
+    gap: 8rem;
+}
+.me{
+    text-align: center;
+}
+.me p{
+    margin-bottom: .5rem;
+}
+.me figure{
+    width: 587px;
+    height: 795px;
+    line-height: 0;
+}
+.me figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* 카드뒤집기 */
+.flip-card{
+    width: 587px;
+    height: 795px;
+    perspective: 1200px;
+    margin: 0 auto;
+}
+.flip-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner{
+    transform: rotateY(180deg);
+}
+
+.front,
+.back{
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+.back figure img{
+    transform: scaleX(-1);
+}
+/* 뒷면 어두운 필터 */
+.back-filter{
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* 뒷면 텍스트 */
+.back-info{
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    padding: 2.5rem 2rem;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: left;
+}
+
+.back-info dl{
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    row-gap: 1.2rem;
+    column-gap: 2rem;
+}
+
+.back-info dt,
+.back-info dd{
+    margin: 0;
+}
+
+.back-info dt{
+    font-weight: 700;
+}
+
+.back-info dd{
+    font-weight: 500;
+    word-break: keep-all;
+}
+
+
+
+.profile-desc-grid{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    height: 100%;
+    justify-content: flex-end;
+}
+.profile-desc-grid h4{
+    font-weight: 700;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+}
+.edu-dl, .certi-dl{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem 3rem;
+}
+.edu-dl dt{
+    grid-column: 1/2;
+}
+
+/* 스킬 */
+.skills{
+    margin-top: 12rem;
+}
+.skills-wrap{
+    background: linear-gradient(180deg, #367592 0%, #a1cbdf 100%);
+    border-radius: 1.25rem;
+    padding: 4rem 8rem;
+    color: white;
+}
+.exp-title{
+    text-align: center;
+}
+.exp-title h2{
+    font-size: 5rem;
+    margin-bottom: 2rem;
+}
+.exp-title h2+p{
+    margin-bottom: 4rem;
+}
+.skill-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 4rem 3rem;
+}
+.tool{
+    display: flex;
+    gap: .5rem;
+    border-bottom: 1px solid white;
+    padding-bottom: .5rem;
+    margin-bottom: .5rem;
+}
+.skill-grid>li{
+    padding: .5rem;
+    transition: all .5s ease 0s;
+    cursor: default;
+}
+.skill-grid>li:hover{
+    background: rgba(255, 255, 255, 0.269);
+    border-radius: 10px;
+}
+.skill-grid>li:hover .icon img{
+    animation: spin 2.5s linear infinite
+}
+
+/* 팝업, 포스터, 배너 */
+.wrapper{
+    background: linear-gradient(180deg, #FFFFFF 0%, #61ADD1 100%);
+    margin-top: 6rem;
+}
+/* 팝업 */
+.popup h2{
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.popup h2+p{
+    text-align: center;
+}
+
+@media(max-width:1024px){}
+@media(max-width:768px){}

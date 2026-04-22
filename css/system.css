@@ -29,7 +29,7 @@
     --pm-color-700:#2C6A54;
     --pm-color-800:#1E4D3C;
     --pm-color-900:#112E24;
-    --point-color:#E0C172;
+    --point-color:#509EC3;
 
     /* 여백 */
     --space-2x-small:0.125rem;
@@ -40,4 +40,25 @@
     --space-x-large:3rem;
     --space-2x-large:4rem;
     --space-3x-large:6rem;
+}
+/* 뱅글뱅글 돌아가라라랄 */
+@keyframes spin {
+    from {
+        transform: scale(1.6) rotate(0deg);
+    }
+    to {
+        transform: scale(1.6) rotate(360deg);
+    }
+}
+/* 진동 */
+@keyframes shake {
+    0%   { transform: translate(0,0) rotate(0deg); }
+
+    20%  { transform: translate(-3px, 3px) rotate(-2deg); }  /* 왼쪽 아래 */
+    40%  { transform: translate(3px, -3px) rotate(2deg); }   /* 오른쪽 위 */
+
+    60%  { transform: translate(-2px, 2px) rotate(-1deg); }
+    80%  { transform: translate(2px, -2px) rotate(1deg); }
+
+    100% { transform: translate(0,0) rotate(0deg); }
 }
