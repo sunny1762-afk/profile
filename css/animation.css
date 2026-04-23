@@ -18,3 +18,14 @@
     opacity: 1;
     transform: scale(1);
 }
+
+
+.ani11{
+    transition:all 1s ease 1s;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+.ani11.on{
+    opacity: 1;
+    transform: translateX(0);
+}

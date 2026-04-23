@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded",()=>{
 
+
+    const hero = document.querySelector(".hero")
+    if(hero){
+        hero.classList.add("on")
+    }
+
     // 위로 스크롤
     const btnTop = document.querySelector(".btn-top")
     if(btnTop){
