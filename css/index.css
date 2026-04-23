@@ -367,20 +367,17 @@ gap: 20rem;
 .popup-img-slider .swiper-wrapper{
     transition-timing-function: linear;
 }
-.popup-img-slider .swiper-slide.swiper-slide-active{
-    /* border:2px solid lime; */
-}
-.popup-txt-slider .swiper-slide{
-}
 .popup-img-slider img{
     width:100%;
     object-fit: cover;
 }
+
 /* 포스터 */
 .poster{
     margin-top: 10rem;
 }
 .poster-title h2{
+    /* text-align: center; */
     font-size: 5rem;
     color: var(--point-color);
 }
@@ -431,6 +428,7 @@ gap: 20rem;
 /* 배너 */
 .banner{
     margin-top: 10rem;
+    padding-bottom: 15rem;
 }
 .banner h2{
     font-size: 5rem;
@@ -454,5 +452,207 @@ gap: 20rem;
     text-align: center;
     margin-bottom: 4rem;
 }
+.detail-swiper figure{
+    position: relative;
+    margin-bottom: 2rem;
+}
+.detail-swiper figure:hover img{
+    filter: brightness(0.4);
+}
+.detail-swiper figure:after{
+    color:#fff;
+    font-size:1.5rem;
+    font-weight: 700;
+    content:"click!";
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    display: none;
+}
+.detail-swiper figure:hover:after{
+    display: block;
+}
+.detail-swiper figure:hover{
+    cursor: pointer;
+}
+.detail-swiper h4{
+    margin-bottom: 0.5rem;
+}
+ /* 닫어 */
+.btn-close{
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:2.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.203);
+    position: sticky;
+    top:1rem;
+    left:50%;
+    transform: translateX(-50%);
+}
+.btn-close img{
+    height:1.2rem;
+}
+
+.btn-top{
+    cursor: pointer;
+    background-color: #fff;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:2.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.203);
+    position: sticky;
+    top:calc(100vh - 3.5rem);
+    left:50%;
+    transform: translateX(-50%);
+    margin-bottom: 3rem;
+}
+.btn-top img{
+    height:1.2rem;
+}
+
+.detail-title {
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    font-size: calc(100vw/10);
+    margin-top: 4rem;
+    position: sticky;
+    top:38vh;
+    z-index: -1;
+}
+.detail-content{
+    text-align: center;
+    padding-bottom: 6rem;
+}
+.detail-content h3{
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-size:2rem;
+}
+.detail-content h2{
+    margin-bottom: 6rem;
+    font-size:3rem;
+    font-weight: 700;
+}
+.detail-dl{
+    width:890px;
+    margin:0 auto;
+}
+.detail-dl dt{
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.detail-dl dt span{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.detail-dl dd{
+    margin-bottom: 3rem;
+    line-height: 140%;
+}
+.detail-shot{
+    margin: 0 auto;
+    width: 768px;
+    line-height: 0;
+}
+
+/* 프로젝트 */
+.project{
+    margin-top: 10rem;
+}
+.project h2{
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--point-color);
+}
+.project h2+p{
+    text-align: center;
+}
+.ptitle{
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+.responsive-icon{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+    text-align: center;
+    width:50%;
+    margin:0 auto;
+}
+.responsive-icon li{
+    flex:1;
+}
+.responsive-icon li h5{
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+    text-transform: capitalize;
+}
+
+.mo{display: none;}
+.pc{display: block;}
+
+.project>.common-frame{
+    margin-bottom: 6rem;
+}
+.project-content{
+    background-color: #fafafa;
+    padding:6rem 0;
+    text-align: center;
+    padding-bottom: 0;
+}
+.project-content h3{
+    font-weight: 700;
+    display: inline-flex;
+    flex-direction: column;
+    gap:0.25rem;
+    margin-bottom: 3rem;
+}
+.project-content h4{
+    font-size:3rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+.project-content h4+p{
+    margin-bottom: 1.5rem;
+}
+.project-sticky{
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    position: sticky;
+    top:1rem;
+    font-weight: 500;
+}
+.project-sticky a{
+    display: block;
+    padding:0.5rem 1.5rem;
+    font-size:0.8rem;
+    background-color: #fff;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.project-sticky a:hover{
+    background-color: var(--point-color);
+    color:#fff;
+}
+
+
 @media(max-width:1024px){}
 @media(max-width:768px){}

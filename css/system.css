@@ -41,6 +41,10 @@
     --space-2x-large:4rem;
     --space-3x-large:6rem;
 }
+
+.fwb{
+    font-weight: 700;
+}
 /* 뱅글뱅글 돌아가라라랄 */
 @keyframes spin {
     from {
