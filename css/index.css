@@ -200,7 +200,7 @@ p{
     border-radius: 1rem;
 }
 .tap.on{
-    animation: shake 0.6s ease
+    animation: shake 0.6s ease ;
 }
 .profile1{
     margin-top: 7rem;
@@ -277,7 +277,7 @@ p{
     z-index: 2;
     display: flex;
     align-items: flex-end;
-    padding: 2.5rem 2rem;
+    padding: 1rem;
     box-sizing: border-box;
     color: #fff;
     text-align: left;
@@ -287,9 +287,8 @@ p{
     width: 100%;
     margin: 0;
     display: grid;
-    grid-template-columns: 140px 1fr;
-    row-gap: 1.2rem;
-    column-gap: 2rem;
+    grid-template-columns: 7rem 1fr;
+    gap: 1.2rem 2rem
 }
 
 .back-info dt,
@@ -302,7 +301,6 @@ p{
 }
 
 .back-info dd{
-    font-weight: 500;
     word-break: keep-all;
 }
 
@@ -378,9 +376,9 @@ p{
 .wrapper {
     background:
     url(../img/snowflake.svg) no-repeat 40% 0% / 20rem auto,
-    url(../img/snowflake.svg) no-repeat 60% 50% / 20rem auto,
-    url(../img/snowflake.svg) no-repeat 30% 100% / 20rem auto,
-    linear-gradient(180deg, #FFFFFF 0%, #61ADD1 100%);
+    url(../img/snowflake.svg) no-repeat 70% 50% / 20rem auto,
+    url(../img/snowflake.svg) no-repeat 20% 100% / 20rem auto,
+    linear-gradient(180deg, #FFFFFF 0%, #73c4eabc 100%);
     margin-top: 6rem;
 }
 /* 팝업 */
@@ -417,6 +415,9 @@ p{
 .popup-img-slider img{
     width:100%;
     object-fit: cover;
+}
+.popup-txt-slider .swiper-slide {
+    background: linear-gradient(180deg, #f7fcfe 0%, #edf7fc 100%);
 }
 
 /* 포스터 */
@@ -911,11 +912,17 @@ p{
     .poster-txt h3 {
         margin-bottom: 2rem;
     }
+    .popup-txt-slider .swiper-slide {
+    background: linear-gradient(180deg, #f7fcfe 0%, #f1f9fd 100%);
+}
 
 }
 @media (max-width:1200px){
     .poster-txt{
         padding-top: 0rem;
+    }
+    .back-info dl{
+        gap: 1.2rem .5rem;
     }
 }
 
@@ -926,6 +933,9 @@ p{
     .certi{
         grid-column: initial;
     }
+    .back-info dl{
+    gap: 1.2rem auto;
+}
 }
 
 @media (max-width:1050px){
@@ -938,6 +948,9 @@ p{
         flex-direction: column;
         align-items: center;
     }
+    .popup-txt-slider .swiper-slide {
+    background: linear-gradient(180deg, #f8fcfe 0%, #f0f8fc 100%);
+}
 }
 
 @media (max-width:1024px){
@@ -1091,6 +1104,12 @@ p{
     .popup-station{
         width:100%;
     }
+    .popup-txt-slider .swiper-slide {
+    pointer-events: none;
+    transition-property: opacity;
+    background: linear-gradient(180deg, #f0f9fd 0%, #ecf7fc 100%);
+    backdrop-filter: blur(11px);
+}
 
     .poster .common-frame{
         flex-direction: column-reverse;
@@ -1185,5 +1204,11 @@ p{
 }
     .skill-grid{
         grid-template-columns: repeat(1,minmax(20px,1fr));
+    }
+
+    .back-info dl{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem
     }
 }

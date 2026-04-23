@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded",()=>{
 
+    const tap = document.querySelector('.tap');
+    setInterval(() => {
+        tap.classList.remove('on');
+        void tap.offsetWidth; // 리플로우 강제 (애니메이션 리셋)
+        tap.classList.add('on');
+    }, 3000);
 
     const hero = document.querySelector(".hero")
     if(hero){
