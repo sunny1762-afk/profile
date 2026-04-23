@@ -370,9 +370,9 @@ p{
     background: rgba(255, 255, 255, 0.269);
     border-radius: 10px;
 }
-.skill-grid>li:hover .icon img{
+/* .skill-grid>li:hover .icon img{
     animation: spin 2.5s linear infinite
-}
+} */
 
 /* 팝업, 포스터, 배너 */
 .wrapper {
@@ -485,6 +485,10 @@ p{
 .banner h2+p{
     text-align: center;
     margin-bottom: 4rem;
+}
+.banner_txt{
+    display: flex;
+    gap: 3rem;
 }
 
 /* 디테일페이지 */
@@ -658,6 +662,9 @@ p{
 .project>.common-frame{
     margin-bottom: 6rem;
 }
+.project-detail{
+    line-height: 0;
+}
 .project-content{
     background-color: #fafafa;
     padding:6rem 0;
@@ -701,6 +708,73 @@ p{
     background-color: var(--point-color);
     color:#fff;
 }
+
+/* 마무리 */
+.contact{
+    background-color: var(--point-color);
+    color:#fff;
+    padding:6rem 0 8rem;
+    text-align: center;
+}
+.contact h1{
+    font-size: calc(100vw / 11);
+    font-weight: 700;
+    margin-bottom: 3rem;
+    position: sticky;
+    top:30vh;
+    left:0;
+    /* mix-blend-mode: difference; */
+    color: white;
+    opacity: 0.2;
+}
+.contact h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+.contact-menu{
+    display: inline-flex;
+    gap:0.5rem;
+    flex-direction: column;
+}
+.contact-menu a{
+    display: block;
+    padding:0.5rem 1.5rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border:1px solid #fff;
+    border-radius: 100px;
+}
+.contact-menu a:hover{
+    background-color: #fff;
+    color:#000;
+}
+
+.contact h3{
+    margin-top: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.menu-sticky{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    position: sticky;
+    left:0;
+    top:-2rem;
+    z-index: 2100;
+}
+.pro-img{
+    margin: 0 auto;
+    line-height: 0;
+    width: 509px;
+    aspect-ratio: 509/695;
+}
+.pro-img img{
+    object-fit: cover;
+}
+
 
 @media (max-width:1800px){
     .popup {
@@ -1082,8 +1156,15 @@ p{
     .skills {
     margin-top: 6rem;
 }
-
-
+    .pro-img{
+        margin: 0 auto;
+        line-height: 0;
+        width: 100%;
+        aspect-ratio: 509/695;
+    }
+    .pro-img img{
+        object-fit: cover;
+    }
 }
 
 
