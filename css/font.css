@@ -1,8 +1,9 @@
 .pt{
     font-family: 'DM Serif Display', serif;
+    line-height: 100%;
 }
 .i{
-    font-style: italic;
+    font-style: italic;;
 }
 
 @font-face {

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             let scrollValue = window.scrollY
             console.log(scrollValue)
             let opacity = 1.1 - (scrollValue / windowHeight*3)
-            opacity = Math.max(0.1, Math.min(1, opacity))
+            opacity = Math.max(0.3, Math.min(1, opacity))
             detailTitle.style.opacity = opacity
         })
     }
