@@ -21,7 +21,7 @@
 }
 
 .ani11{
-    transition:all 1s ease .5s;
+    transition:all 1s ease .7s;
     opacity: 0;
     transform: translateX(-20px);
 }
