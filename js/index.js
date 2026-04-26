@@ -40,22 +40,32 @@ document.addEventListener("DOMContentLoaded",()=>{
     const allMenu = document.querySelector(".all-menu")
     let statusMenu = false
     const btnImg = document.querySelector(".btn-img")
+    const modal = document.querySelector(".modal")
 
     btnMenu.addEventListener('click',()=>{
         if(statusMenu){
             //메뉴닫기->삼선모양으로 바뀌어야함
             allMenu.classList.remove("on")
+            modal.classList.remove("on")
             btnMenu.classList.remove("open")
             btnImg.setAttribute('src','./img/btn-menu.svg')
             statusMenu = false
         }else{
             //메뉴열기->x모양으로 바뀌어야함
             allMenu.classList.add("on")
+            modal.classList.add("on")
             btnMenu.classList.add("open")
             btnImg.setAttribute('src','./img/btn-close.svg')
             statusMenu = true
         }
     })
+    modal.addEventListener('click',()=>{
+            allMenu.classList.remove("on")
+            modal.classList.remove("on")
+            btnMenu.classList.remove("open")
+            btnImg.setAttribute('src','./img/btn-menu.svg')
+            statusMenu = false
+        })
 
     // const profile = document.querySelector(".profile")
     // let profileTop = profile.offsetTop
@@ -65,6 +75,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     window.addEventListener('scroll',()=>{
         allMenu.classList.remove("on")
+        modal.classList.remove("on")
         btnMenu.classList.remove("open")
         btnImg.setAttribute('src','./img/btn-menu.svg')
         statusMenu = false
