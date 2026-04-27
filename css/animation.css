@@ -9,17 +9,6 @@
     transform: translateX(0);
 }
 
-/* 오른쪽에서 왼쪽으로 나타나는 애니메이션 */
-.ani3{
-    transition:all 1s ease 0s;
-    opacity: 0;
-    transform: translateX(20px);
-}
-.ani3.on{
-    opacity: 1;
-    transform: translateX(0);
-}
-
 .ani11{
     transition:all 1s ease .7s;
     opacity: 0;
