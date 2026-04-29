@@ -1076,7 +1076,7 @@ p{
         font-size:2rem;
     }
     .project h2+p{
-        font-size:1.3rem;
+        
     }
     .responsive-icon{
         width:auto;
@@ -1175,13 +1175,13 @@ p{
         font-size: 2rem;
     }
     .poster-title h2+p {
-        font-size: 1.3rem;
+       
     }
     .popup h2 {
         font-size: 2rem;
     }
     .popup h2+p{
-        font-size: 1.3rem;
+        
     }
 
     .banner h2{
@@ -1190,7 +1190,7 @@ p{
         margin-bottom: 1rem;
     }
     .banner h2+p{
-        font-size:1.3rem;
+     
         margin-bottom: 3rem;
     }
     .detail-title {
@@ -1203,7 +1203,7 @@ p{
         font-size:2rem;
     }
     .detail h2+p{
-        font-size:1.3rem;
+       
     }
     
     .all-menu{
